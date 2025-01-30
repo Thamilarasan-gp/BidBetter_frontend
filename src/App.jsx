@@ -13,7 +13,7 @@ import LiveAuction from './LiveAuction';
 import Categories from './Categories';
 import Footer from './Footer';
 
-import ProductCategory from './ProductCategory';
+import Productcategory from './Productcategory';
 import ProductDetails from './ProductDetails';
 
 /* To create our Products */
@@ -73,7 +73,7 @@ function App() {
             {/* Protected Routes */}
             <Route path="/home" element={<PrivateRoute> <HomePage /></PrivateRoute>} />
             <Route path="/productdetails/:id" element={<PrivateRoute> <Navbar /> <ProductDetails /> <Footer /> </PrivateRoute>} />
-            <Route path="/category/:categoryId" element={<PrivateRoute> <Navbar /> <ProductCategory /> <Footer /></PrivateRoute>} />
+            <Route path="/category/:categoryId" element={<PrivateRoute> <Navbar /> <Productcategory /> <Footer /></PrivateRoute>} />
           </Routes>
         </div>
       </Router>
