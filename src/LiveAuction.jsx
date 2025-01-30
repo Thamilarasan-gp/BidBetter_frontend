@@ -59,7 +59,7 @@ const LiveAuction = () => {
       console.log('Starting to fetch items...');
       try {
         console.log('Making request to /items endpoint...');
-        const response = await axios.get('http://localhost:5000/items');
+        const response = await axios.get('https://bidbetter-backend.onrender.com/items');
         console.log('Raw response from backend:', {
           status: response.status,
           headers: response.headers,
