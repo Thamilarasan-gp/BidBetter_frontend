@@ -1,0 +1,115 @@
+.invite-code-container {
+    font-family: "Work Sans", "Noto Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .layout-container {
+    width: 100%;
+    max-width: 960px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content {
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111418;
+  }
+  
+  .header p {
+    color: #637588;
+    font-size: 14px;
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  .input-label {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .form-input {
+    flex-grow: 1;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #111418;
+  }
+  
+  .copy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f4;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  
+  .social-share {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  
+  .social-icons button {
+    background-color: #f0f2f4;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .social-icons svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .start-auction-button {
+    background-color: #1980e6;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .start-auction-button:hover {
+    background-color: #176fa3;
+  }
+  

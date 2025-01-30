@@ -1,0 +1,100 @@
+.catagories-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.categories-container p {
+    color: #8d2d3b;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif; 
+    text-align: center; 
+    font-size: 24px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.catagories_items {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid #8d2d3b; 
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: #fff; 
+    color: #8d2d3b; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    min-height: 180px;
+}
+
+.catagories_items svg {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.catagories_items:hover {
+    background-color: #8d2d3b; 
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(141, 45, 59, 0.2);
+}
+
+.catagories_items:hover svg {
+    transform: scale(1.1);
+}
+
+.catagories_items:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(141, 45, 59, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .catagories-box {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .catagories_items {
+        padding: 30px 15px;
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .catagories-box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .categories-container p {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    .catagories_items {
+        padding: 25px 15px;
+        min-height: 140px;
+    }
+
+    .catagories_items svg {
+        font-size: 2rem;
+    }
+}

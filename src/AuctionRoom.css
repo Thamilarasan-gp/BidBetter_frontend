@@ -1,0 +1,218 @@
+.auction-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+   
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0084FF;
+    letter-spacing: -0.5px;
+}
+
+/* Navigation */
+nav button {
+    background: transparent;
+    border: none;
+    color: #5E6472;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button.active,
+nav button:hover {
+    background: #0084FF;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 132, 255, 0.3);
+}
+
+.timer {
+    font-size: 1.8rem;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    width: 100%;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.player-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0084FF;
+    margin-right: 30px;
+}
+
+.player-card .info {
+    flex-grow: 1;
+}
+
+.player-card h3 {
+    font-size: 1.5rem;
+    color: #0084FF;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.stats span {
+    font-weight: 600;
+    color: #5E6472;
+}
+
+.current-bid h3 {
+    background: linear-gradient(135deg, #0084FF, #00C6FF);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+.bid-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.bid-btn {
+    background: #0084FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bid-btn:hover {
+    background: #00C6FF;
+}
+
+.team-table {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   width: 140%;
+   color: #007bfe;
+
+}
+
+.team-table table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.team-table th, .team-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+   
+}
+
+.team-table th {
+    background: #0084FF;
+    color: white;
+   
+}
+
+.upcoming-players {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-players ul {
+    list-style: none;
+    padding: 0;
+}
+
+.upcoming-players li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: #007bfe;
+}
+
+.place-bid {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.place-bid h3 {
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .player-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .player-card img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .bid-controls {
+        flex-direction: column;
+    }
+
+    .bid-btn {
+        margin-bottom: 10px;
+    }
+} 

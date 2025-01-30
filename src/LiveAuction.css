@@ -1,0 +1,265 @@
+/* Root Container */
+.sports-auction-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 0;
+}
+
+/* Main Content */
+.sports-auction-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sports-auction-title {
+  font-size: 2.5rem;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sports-auction-subtitle {
+  text-align: center;
+  color: #636e72;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* Auction Grid */
+.sports-auction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Auction Card */
+.sports-auction-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  animation: cardFadeIn 0.5s ease forwards;
+}
+
+.sports-auction-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.sports-auction-card-image-container {
+  position: relative;
+  padding-top: 75%;
+  overflow: hidden;
+}
+
+.sports-auction-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sports-auction-card:hover .sports-auction-card-image {
+  transform: scale(1.1);
+}
+
+/* Stock and Bid Tags */
+.sports-auction-stock-tag,
+.sports-auction-bid-tag {
+  position: absolute;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.sports-auction-stock-tag {
+  top: 15px;
+  left: 15px;
+  background: rgba(46, 213, 115, 0.9);
+  color: white;
+}
+
+.sports-auction-bid-tag {
+  top: 15px;
+  right: 15px;
+  background: rgba(241, 196, 15, 0.9);
+  color: #2d3436;
+}
+
+/* Card Title */
+.sports-auction-card-title {
+  padding: 20px 20px 10px;
+  font-size: 1.2rem;
+  color: #2d3436;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Card Details */
+.sports-auction-card-details {
+  padding: 0 20px 20px;
+}
+
+.sports-auction-card-details p {
+  margin: 8px 0;
+  color: #636e72;
+  font-size: 0.95rem;
+}
+
+.sports-auction-card-details strong {
+  color: #2d3436;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* Card Actions */
+.sports-auction-card-actions {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.bid-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #8d2d3b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bid-button:hover {
+  background: #a13546;
+  transform: translateY(-2px);
+}
+
+.wishlist-button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f2f6;
+  color: #8d2d3b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlist-button:hover {
+  background: #8d2d3b;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.sports-auction-view-all {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.sports-auction-view-all button {
+  padding: 15px 30px;
+  border: 2px solid #8d2d3b;
+  border-radius: 8px;
+  background: transparent;
+  color: #8d2d3b;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sports-auction-view-all button:hover {
+  background: #8d2d3b;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hover effects for interactive elements */
+.sports-auction-card-actions button svg {
+  transition: transform 0.3s ease;
+}
+
+.sports-auction-card-actions button:hover svg {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sports-auction-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .sports-auction-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sports-auction-container {
+    padding: 40px 0;
+  }
+
+  .sports-auction-title {
+    font-size: 1.8rem;
+  }
+
+  .sports-auction-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sports-auction-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .sports-auction-card-title {
+    font-size: 1.1rem;
+  }
+
+  .sports-auction-card-details p {
+    font-size: 0.9rem;
+  }
+
+  .sports-auction-view-all button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for card loading */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
