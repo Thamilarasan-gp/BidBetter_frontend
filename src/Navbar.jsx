@@ -5,16 +5,60 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [username, setUsername] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
 
   const handleLogout = () => {
     logout();
     navigate('/login');
   };
 
+  const fetchUsername = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/username', {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      });
+
+      // Check if the response is valid JSON before proceeding
+      if (!response.ok) {
+        const errorText = await response.text(); // Get the raw response text
+        console.error('Error fetching username:', errorText);
+        setError('An error occurred while fetching the username.');
+        return;
+      }
+
+      const data = await response.json();
+      console.log('Fetched username:', data.username);
+      setUsername(data.username); // Store the username in the state
+    } catch (error) {
+      console.error('Error fetching username:', error);
+      setError('An error occurred during the request.');
+    }
+  };
+
+  useEffect(() => {
+    fetchUsername(); // Fetch username when the component mounts
+  }, []);
+
   const menuItems = [
-    
-  
+    {
+      title: 'Dashboard',
+      items: [
+        { name: 'My Dashboard', path: '/dashboard' }
+      ]
+    },
+    {
+      title: 'Products',
+      items: [
+        { name: 'My Products', path: '/my-products' },
+        { name: 'Create Product', path: '/description' }
+      ]
+    },
     {
       title: 'Auctions',
       items: [
@@ -53,7 +97,7 @@ const Navbar = () => {
             <div className="profile-header">
               <div className="profile-avatar">&#x1F464;</div>
               <div className="profile-info">
-                <h3>Welcome Back!</h3>
+                <h3>Welcome {username || 'User'}</h3> {/* Display the fetched username */}
               </div>
             </div>
 
@@ -78,7 +122,13 @@ const Navbar = () => {
             </div>
 
             <div className="profile-footer">
-            
+              <Link 
+                to="/profile"
+                className="profile-link"
+                onClick={() => setIsProfileOpen(false)}
+              >
+                Profile Settings
+              </Link>
               <button 
                 className="logout-button"
                 onClick={handleLogout}
