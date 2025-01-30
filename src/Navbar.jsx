@@ -15,19 +15,20 @@ const Navbar = () => {
     navigate('/login');
   };
 
- 
+
   const menuItems = [
+  
     {
-      title: 'Dashboard',
+      title: 'Products',
       items: [
-        { name: 'My Dashboard', path: '/dashboard' }
+     
+        { name: 'Create Product', path: '/description' }
       ]
     },
-  
     {
       title: 'Auctions',
       items: [
-        { name: 'My Auctions', path: '/my-auctions' },
+   
         { name: 'Create Auction', path: '/create-auction' },
         { name: 'Winning Bids', path: '/winning-bids' }
       ]
